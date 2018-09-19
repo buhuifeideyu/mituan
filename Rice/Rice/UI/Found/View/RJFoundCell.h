@@ -7,9 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+@class RJLabelModel;
 
 @interface RJFoundCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIButton *titleName;
+
+@property (nonatomic,strong) RJLabelModel *model;
+
 
 @end

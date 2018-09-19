@@ -163,6 +163,7 @@
 		B1C506BD2151014300833543 /* RJHeaderSearchAlbumCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1C506BB2151014300833543 /* RJHeaderSearchAlbumCollectionReusableView.xib */; };
 		B1C506C121511A0500833543 /* RJFeedbackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C506BF21511A0500833543 /* RJFeedbackViewController.m */; };
 		B1C506C221511A0500833543 /* RJFeedbackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B1C506C021511A0500833543 /* RJFeedbackViewController.xib */; };
+		B1C506C521523A3000833543 /* RJLabelModel.m in Sources */ = {isa = PBXBuildFile; fileRef = B1C506C421523A3000833543 /* RJLabelModel.m */; };
 		E1D36D8C6E2F036291E73D61 /* libPods-Rice.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6099F6028D71B999C097B88D /* libPods-Rice.a */; };
 /* End PBXBuildFile section */
 
@@ -465,6 +466,8 @@
 		B1C506BE21511A0500833543 /* RJFeedbackViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJFeedbackViewController.h; sourceTree = "<group>"; };
 		B1C506BF21511A0500833543 /* RJFeedbackViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJFeedbackViewController.m; sourceTree = "<group>"; };
 		B1C506C021511A0500833543 /* RJFeedbackViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RJFeedbackViewController.xib; sourceTree = "<group>"; };
+		B1C506C321523A3000833543 /* RJLabelModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RJLabelModel.h; sourceTree = "<group>"; };
+		B1C506C421523A3000833543 /* RJLabelModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RJLabelModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -847,6 +850,8 @@
 		B10D9B79213E746000213EE2 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B1C506C321523A3000833543 /* RJLabelModel.h */,
+				B1C506C421523A3000833543 /* RJLabelModel.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -1431,6 +1436,7 @@
 				B1C506BC2151014300833543 /* RJHeaderSearchAlbumCollectionReusableView.m in Sources */,
 				B10D9BA5213F675700213EE2 /* QLCacheManager.m in Sources */,
 				B10D9C13213FC75D00213EE2 /* RJHomeTabBarViewController.m in Sources */,
+				B1C506C521523A3000833543 /* RJLabelModel.m in Sources */,
 				B10D9BA1213F668800213EE2 /* YYUserInfoResponData.m in Sources */,
 				B10D9BF5213F6EFA00213EE2 /* YYFileUploader.m in Sources */,
 				B12428B921427D5E007A28F7 /* RJSettingViewController.m in Sources */,

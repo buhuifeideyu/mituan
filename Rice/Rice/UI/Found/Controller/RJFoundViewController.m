@@ -9,13 +9,17 @@
 #import "RJFoundViewController.h"
 #import "RJFoundLayout.h"
 #import "RJFoundCell.h"
+#import "RJLabelModel.h"
 
 @interface RJFoundViewController ()<UICollectionViewDataSource,UICollectionViewDelegate>
 
 @property(nonatomic,strong)UICollectionView *mycollectionView;
 @property(nonatomic,strong)UICollectionViewLayout *layout;
 
-@property(nonatomic,strong)NSArray *heightArr;
+@property(nonatomic,strong)NSMutableArray *heightArr;
+
+@property (nonatomic,strong) NSMutableArray *labelListArr;
+
 
 @end
 
@@ -29,7 +33,8 @@
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
     self.navigationController.navigationBar.barTintColor = kNavColor;
     self.navigationController.navigationBar.translucent = NO;
-    
+    [self setData];
+    [self getLabelList];
 }
 
 - (void)viewDidDisappear:(BOOL)animated{
@@ -40,6 +45,11 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [self setUI];
+}
+
+- (void)setData {
+    self.labelListArr = [NSMutableArray array];
+    self.heightArr = [NSMutableArray array];
 }
 
 - (void)setUI {
@@ -54,7 +64,7 @@
     
     NSString *height = self.heightArr[indexPath.row];
     cell.titleName.layer.cornerRadius = [height integerValue] / 4;
-    [cell.titleName setTitle:@"有趣" forState:UIControlStateNormal];
+   
     return cell;
 }
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
@@ -81,16 +91,39 @@
     return _layout;
 }
 
--(NSArray *)heightArr{
-    if(!_heightArr){
-        //随机生成高度
-        NSMutableArray *arr = [NSMutableArray array];
-        for (int i = 0; i<20; i++) {
-            [arr addObject:@(arc4random()%50+80)];
+//-(NSArray *)heightArr{
+//    if(!_heightArr){
+//        //随机生成高度
+//        NSMutableArray *arr = [NSMutableArray array];
+//        for (int i = 0; i<self.labelListArr.count; i++) {
+//            [arr addObject:@(arc4random()%50+80)];
+//        }
+//        _heightArr = [arr copy];
+//    }
+//    return _heightArr;
+//}
+
+#pragma mark ---------------------------netWork
+#pragma mark ---获取标签
+- (void)getLabelList {
+    [RJHttpRequest postLabelListWithPage:1 callback:^(NSDictionary *result) {
+        if ([result ql_boolForKey:@"status"]) {
+            NSArray *dicArr = result[@"data"];
+            [self.labelListArr removeAllObjects];
+            if (dicArr.count > 0 && dicArr) {
+                for (NSDictionary *dic in dicArr) {
+                    RJLabelModel *model = [[RJLabelModel alloc] init];
+                    [model initWithDictionary:dic];
+                    [self.labelListArr addObject:model];
+                }
+            }
+            
+            for (int i = 0; i < self.labelListArr.count; i++) {
+                [self.heightArr addObject:@(arc4random()%50+80)];
+            }
+            [self.mycollectionView reloadData];
         }
-        _heightArr = [arr copy];
-    }
-    return _heightArr;
+    }];
 }
 
 - (void)didReceiveMemoryWarning {
