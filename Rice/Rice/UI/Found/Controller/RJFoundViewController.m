@@ -64,7 +64,7 @@
     
     NSString *height = self.heightArr[indexPath.row];
     cell.titleName.layer.cornerRadius = [height integerValue] / 4;
-   
+    cell.model = self.labelListArr[indexPath.row];
     return cell;
 }
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
