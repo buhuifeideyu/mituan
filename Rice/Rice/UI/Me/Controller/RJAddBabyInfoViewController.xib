@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RJAddBabyInfoViewController">
+            <connections>
+                <outlet property="addBadyBtn" destination="29r-et-hBp" id="KZi-g1-JEW"/>
+                <outlet property="datePicker" destination="l6Y-3R-PiX" id="inQ-Ql-VIB"/>
+                <outlet property="femaleBtn" destination="htp-S3-gkq" id="Q0t-cY-rft"/>
+                <outlet property="maleBtn" destination="aWu-2M-mX0" id="Cfe-WU-uZc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BaW-TL-c9H">
+                    <rect key="frame" x="10" y="40" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="2dD-kD-P9H"/>
+                        <constraint firstAttribute="width" constant="44" id="C92-oQ-Oc7"/>
+                    </constraints>
+                    <state key="normal" image="return"/>
+                    <connections>
+                        <action selector="backVC:" destination="-1" eventType="touchUpInside" id="tJq-KB-H41"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="宝宝的性别" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5tY-zn-iMj">
+                    <rect key="frame" x="136.5" y="104" width="102" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aWu-2M-mX0">
+                    <rect key="frame" x="50" y="162" width="88" height="88"/>
+                    <state key="normal" image="nanhai"/>
+                    <connections>
+                        <action selector="maleAction:" destination="-1" eventType="touchUpInside" id="ULr-mH-q54"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="htp-S3-gkq">
+                    <rect key="frame" x="237.5" y="162" width="88" height="88"/>
+                    <state key="normal" image="nvhai"/>
+                    <connections>
+                        <action selector="femaleAction:" destination="-1" eventType="touchUpInside" id="iKa-8i-1FU"/>
+                    </connections>
+                </button>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="30" useCurrentDate="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l6Y-3R-PiX">
+                    <rect key="frame" x="30" y="350" width="315" height="120"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="120" id="N5C-79-v4O"/>
+                    </constraints>
+                    <date key="date" timeIntervalSinceReferenceDate="558340932.07232702">
+                        <!--2018-09-11 06:42:12 +0000-->
+                    </date>
+                    <connections>
+                        <action selector="chooseTimeAction:" destination="-1" eventType="valueChanged" id="8gP-ZD-W9D"/>
+                    </connections>
+                </datePicker>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="宝宝生日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W2m-Yj-Tkn">
+                    <rect key="frame" x="147" y="280" width="82" height="24"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29r-et-hBp">
+                    <rect key="frame" x="94" y="525" width="187.5" height="44"/>
+                    <color key="backgroundColor" red="0.98431372549999996" green="0.3294117647" blue="0.32156862749999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="44" id="OgT-yy-E78"/>
+                    </constraints>
+                    <state key="normal" title="点击添加">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="addBadyAction:" destination="-1" eventType="touchUpInside" id="4n6-N5-K2E"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="htp-S3-gkq" firstAttribute="height" secondItem="aWu-2M-mX0" secondAttribute="height" id="4SP-dU-jzy"/>
+                <constraint firstItem="l6Y-3R-PiX" firstAttribute="top" secondItem="aWu-2M-mX0" secondAttribute="bottom" constant="100" id="7yq-xr-kVT"/>
+                <constraint firstItem="29r-et-hBp" firstAttribute="top" secondItem="l6Y-3R-PiX" secondAttribute="bottom" constant="55" id="9TY-9q-PjD"/>
+                <constraint firstItem="l6Y-3R-PiX" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="30" id="9eh-8S-QBO"/>
+                <constraint firstItem="29r-et-hBp" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="Bex-HT-tTo"/>
+                <constraint firstItem="W2m-Yj-Tkn" firstAttribute="top" secondItem="aWu-2M-mX0" secondAttribute="bottom" constant="30" id="Fj0-SO-zUr"/>
+                <constraint firstItem="aWu-2M-mX0" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" multiplier="0.5" id="HM1-lI-KBA"/>
+                <constraint firstItem="5tY-zn-iMj" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" id="JDC-wy-FvM"/>
+                <constraint firstItem="htp-S3-gkq" firstAttribute="centerY" secondItem="aWu-2M-mX0" secondAttribute="centerY" id="bxA-Pf-U1b"/>
+                <constraint firstItem="htp-S3-gkq" firstAttribute="width" secondItem="aWu-2M-mX0" secondAttribute="width" id="ejg-d3-aW7"/>
+                <constraint firstItem="W2m-Yj-Tkn" firstAttribute="centerX" secondItem="5tY-zn-iMj" secondAttribute="centerX" id="ewW-10-R60"/>
+                <constraint firstItem="htp-S3-gkq" firstAttribute="centerX" secondItem="Q5M-cg-NOt" secondAttribute="centerX" multiplier="1.5" id="fM9-PG-Tiw"/>
+                <constraint firstItem="BaW-TL-c9H" firstAttribute="leading" secondItem="Q5M-cg-NOt" secondAttribute="leading" constant="10" id="iks-Pm-3Db"/>
+                <constraint firstItem="aWu-2M-mX0" firstAttribute="centerY" secondItem="Q5M-cg-NOt" secondAttribute="centerY" multiplier="0.6" id="kIX-2P-pzm"/>
+                <constraint firstItem="29r-et-hBp" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="lH9-JW-0Dh"/>
+                <constraint firstItem="Q5M-cg-NOt" firstAttribute="trailing" secondItem="l6Y-3R-PiX" secondAttribute="trailing" constant="30" id="n1A-m8-nRm"/>
+                <constraint firstItem="5tY-zn-iMj" firstAttribute="top" secondItem="BaW-TL-c9H" secondAttribute="bottom" constant="20" id="vpP-YA-uyP"/>
+                <constraint firstItem="BaW-TL-c9H" firstAttribute="top" secondItem="Q5M-cg-NOt" secondAttribute="top" constant="20" id="zrD-2B-IEw"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="Q5M-cg-NOt"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="nanhai" width="88" height="88"/>
+        <image name="nvhai" width="88" height="88"/>
+        <image name="return" width="19" height="33"/>
+    </resources>
+</document>

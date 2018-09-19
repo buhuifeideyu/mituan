@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="RJNewsStoryCell">
+            <rect key="frame" x="0.0" y="0.0" width="249" height="220"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="249" height="220"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2222" translatesAutoresizingMaskIntoConstraints="NO" id="oo0-LK-yUf">
+                        <rect key="frame" x="0.0" y="0.0" width="249" height="176"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="故事名字" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aLN-Vz-9un">
+                        <rect key="frame" x="0.0" y="181" width="57.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="故事描述" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xyz-Zq-yKA">
+                        <rect key="frame" x="0.0" y="201" width="239" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ThA-sB-dd0">
+                        <rect key="frame" x="194" y="179" width="55" height="20"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <state key="normal" title="1234" image="喜欢拷贝">
+                            <color key="titleColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </state>
+                    </button>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vip低" translatesAutoresizingMaskIntoConstraints="NO" id="qEh-dW-Skz">
+                        <rect key="frame" x="209" y="0.0" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="stC-MK-Law"/>
+                            <constraint firstAttribute="width" constant="40" id="ynq-bi-o75"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="ThA-sB-dd0" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aLN-Vz-9un" secondAttribute="trailing" constant="8" id="2TR-ga-gWV"/>
+                <constraint firstItem="Xyz-Zq-yKA" firstAttribute="leading" secondItem="SEy-5g-ep8" secondAttribute="leading" id="50x-qx-WbO"/>
+                <constraint firstItem="ThA-sB-dd0" firstAttribute="centerY" secondItem="aLN-Vz-9un" secondAttribute="centerY" id="CRm-TS-fi4"/>
+                <constraint firstItem="SEy-5g-ep8" firstAttribute="trailing" secondItem="oo0-LK-yUf" secondAttribute="trailing" id="Cww-zY-r6x"/>
+                <constraint firstItem="SEy-5g-ep8" firstAttribute="trailing" secondItem="Xyz-Zq-yKA" secondAttribute="trailing" constant="10" id="Dui-nM-DlT"/>
+                <constraint firstItem="oo0-LK-yUf" firstAttribute="leading" secondItem="SEy-5g-ep8" secondAttribute="leading" id="X1l-MB-yTi"/>
+                <constraint firstItem="aLN-Vz-9un" firstAttribute="top" secondItem="oo0-LK-yUf" secondAttribute="bottom" constant="5" id="YSK-l2-xfT"/>
+                <constraint firstItem="SEy-5g-ep8" firstAttribute="trailing" secondItem="qEh-dW-Skz" secondAttribute="trailing" id="ZSh-0C-ikR"/>
+                <constraint firstItem="aLN-Vz-9un" firstAttribute="leading" secondItem="SEy-5g-ep8" secondAttribute="leading" id="dHx-ZI-QKE"/>
+                <constraint firstItem="SEy-5g-ep8" firstAttribute="trailing" secondItem="ThA-sB-dd0" secondAttribute="trailing" id="eFC-eD-txj"/>
+                <constraint firstItem="Xyz-Zq-yKA" firstAttribute="top" secondItem="aLN-Vz-9un" secondAttribute="bottom" constant="3" id="goU-2H-CrI"/>
+                <constraint firstItem="oo0-LK-yUf" firstAttribute="top" secondItem="SEy-5g-ep8" secondAttribute="top" id="gsB-uW-eZf"/>
+                <constraint firstItem="SEy-5g-ep8" firstAttribute="bottom" secondItem="oo0-LK-yUf" secondAttribute="bottom" constant="44" id="xMc-LD-Bfl"/>
+                <constraint firstItem="qEh-dW-Skz" firstAttribute="top" secondItem="SEy-5g-ep8" secondAttribute="top" id="yL9-v2-u2Y"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="SEy-5g-ep8"/>
+            <size key="customSize" width="249" height="193"/>
+            <connections>
+                <outlet property="coverImg" destination="oo0-LK-yUf" id="19m-tK-FUF"/>
+                <outlet property="likeBtn" destination="ThA-sB-dd0" id="rvK-V0-m4J"/>
+                <outlet property="storyContent" destination="Xyz-Zq-yKA" id="pJK-g1-aDv"/>
+                <outlet property="storyTitle" destination="aLN-Vz-9un" id="CDM-Mp-SfL"/>
+                <outlet property="vipImg" destination="qEh-dW-Skz" id="sxi-vB-Nst"/>
+            </connections>
+            <point key="canvasLocation" x="-204.5" y="-34"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="2222" width="480" height="367"/>
+        <image name="vip低" width="47" height="47"/>
+        <image name="喜欢拷贝" width="20" height="20"/>
+    </resources>
+</document>

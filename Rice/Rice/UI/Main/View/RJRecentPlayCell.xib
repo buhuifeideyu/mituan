@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8ET-Cb-hxf" userLabel="Recent Play Cell" customClass="RJRecentPlayCell">
+            <rect key="frame" x="0.0" y="0.0" width="342" height="112"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="342" height="112"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="3W0-2u-BTm">
+                        <rect key="frame" x="0.0" y="0.0" width="342" height="112"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最近播放的" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t4G-Xd-zcI">
+                        <rect key="frame" x="14" y="85" width="71.5" height="17"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fuh-b4-WxW">
+                        <rect key="frame" x="156" y="41" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="Pb2-Fo-Mcf"/>
+                            <constraint firstAttribute="height" constant="30" id="lBB-3h-L2m"/>
+                        </constraints>
+                        <state key="normal" image="播放按钮"/>
+                        <connections>
+                            <action selector="recentPlayAction:" destination="8ET-Cb-hxf" eventType="touchUpInside" id="Vwl-PF-zkj"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jm0-Ml-8x8">
+                        <rect key="frame" x="298" y="78.5" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="CjB-tJ-nNC"/>
+                            <constraint firstAttribute="height" constant="30" id="Hvy-63-Vqp"/>
+                        </constraints>
+                        <state key="normal" image="详情按钮"/>
+                        <connections>
+                            <action selector="recentPlayListAction:" destination="8ET-Cb-hxf" eventType="touchUpInside" id="mC7-Uk-njX"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehY-8L-VjL">
+                        <rect key="frame" x="216" y="41" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="MIz-Fp-c4d"/>
+                            <constraint firstAttribute="height" constant="30" id="hQc-sr-cAR"/>
+                        </constraints>
+                        <state key="normal" image="icon_screeningequipment"/>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GF7-Zm-zme">
+                        <rect key="frame" x="298.5" y="10" width="30" height="30"/>
+                        <state key="normal" image="固定拷贝"/>
+                    </button>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="GF7-Zm-zme" firstAttribute="width" secondItem="jm0-Ml-8x8" secondAttribute="width" id="F00-W2-Sfg"/>
+                <constraint firstItem="h84-nz-jns" firstAttribute="trailing" secondItem="3W0-2u-BTm" secondAttribute="trailing" id="It0-Bv-19S"/>
+                <constraint firstItem="h84-nz-jns" firstAttribute="bottom" secondItem="3W0-2u-BTm" secondAttribute="bottom" id="VBF-lA-izq"/>
+                <constraint firstItem="3W0-2u-BTm" firstAttribute="leading" secondItem="h84-nz-jns" secondAttribute="leading" id="ZVN-vJ-DOs"/>
+                <constraint firstItem="GF7-Zm-zme" firstAttribute="centerX" secondItem="jm0-Ml-8x8" secondAttribute="centerX" id="bFc-Lq-zny"/>
+                <constraint firstItem="ehY-8L-VjL" firstAttribute="centerY" secondItem="Fuh-b4-WxW" secondAttribute="centerY" id="dZ0-U3-Itv"/>
+                <constraint firstItem="GF7-Zm-zme" firstAttribute="height" secondItem="jm0-Ml-8x8" secondAttribute="height" id="fwf-Yg-Zoh"/>
+                <constraint firstItem="GF7-Zm-zme" firstAttribute="top" secondItem="h84-nz-jns" secondAttribute="top" constant="10" id="gs8-gO-v0I"/>
+                <constraint firstItem="Fuh-b4-WxW" firstAttribute="centerY" secondItem="h84-nz-jns" secondAttribute="centerY" id="iHf-Yk-QvR"/>
+                <constraint firstItem="Fuh-b4-WxW" firstAttribute="centerX" secondItem="h84-nz-jns" secondAttribute="centerX" id="ilV-6T-HdI"/>
+                <constraint firstItem="h84-nz-jns" firstAttribute="trailing" secondItem="jm0-Ml-8x8" secondAttribute="trailing" constant="14" id="kDL-aV-OVJ"/>
+                <constraint firstItem="jm0-Ml-8x8" firstAttribute="centerY" secondItem="t4G-Xd-zcI" secondAttribute="centerY" id="lD0-US-sUB"/>
+                <constraint firstItem="ehY-8L-VjL" firstAttribute="leading" secondItem="Fuh-b4-WxW" secondAttribute="trailing" constant="30" id="oGk-Ak-Ad6"/>
+                <constraint firstItem="3W0-2u-BTm" firstAttribute="top" secondItem="h84-nz-jns" secondAttribute="top" id="tGd-bu-cjA"/>
+                <constraint firstItem="t4G-Xd-zcI" firstAttribute="leading" secondItem="h84-nz-jns" secondAttribute="leading" constant="14" id="xGI-BH-4QN"/>
+                <constraint firstItem="h84-nz-jns" firstAttribute="bottom" secondItem="t4G-Xd-zcI" secondAttribute="bottom" constant="10" id="zEE-Xb-4r7"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="h84-nz-jns"/>
+            <size key="customSize" width="342" height="112"/>
+            <connections>
+                <outlet property="coverImg" destination="3W0-2u-BTm" id="o8b-FI-63g"/>
+                <outlet property="detailsBtn" destination="jm0-Ml-8x8" id="TtE-IL-gWS"/>
+                <outlet property="equipmentBtn" destination="ehY-8L-VjL" id="U1c-9Q-tEP"/>
+                <outlet property="fixedBtn" destination="GF7-Zm-zme" id="lsq-Vr-KI6"/>
+                <outlet property="playBtn" destination="Fuh-b4-WxW" id="mMX-os-cZc"/>
+            </connections>
+            <point key="canvasLocation" x="38" y="60"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="icon_screeningequipment" width="34" height="34"/>
+        <image name="固定拷贝" width="28" height="16"/>
+        <image name="播放按钮" width="34" height="34"/>
+        <image name="详情按钮" width="17" height="13"/>
+    </resources>
+</document>

@@ -1,0 +1,21 @@
+platform :ios, '9.0'
+target 'Rice'  do
+
+pod 'MJExtension'
+pod 'AFNetworking'
+pod 'Reachability'
+pod 'FMDB'
+pod 'BlocksKit'
+pod 'CMPopTipView'
+pod 'RegexKitLite'
+pod 'MJRefresh'
+pod 'MBProgressHUD'
+pod 'Parse'
+pod 'ZYBannerView'
+pod 'Masonry'
+pod 'lottie-ios'
+pod 'SDWebImage'
+pod 'IQKeyboardManager'
+
+
+end

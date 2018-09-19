@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="XbF-Ex-9pg" customClass="RJFamilySettingView">
+            <rect key="frame" x="0.0" y="0.0" width="287" height="342"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="d2l-y5-g8i">
+                    <rect key="frame" x="99.5" y="30" width="88" height="88"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="88" id="EsX-OB-0O5"/>
+                        <constraint firstAttribute="width" constant="88" id="VSJ-Au-Au6"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uZZ-Ec-uyj">
+                    <rect key="frame" x="123.5" y="138" width="40" height="20"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dON-8D-EPi">
+                    <rect key="frame" x="193.5" y="136.5" width="23" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="23" id="KeG-kr-YdG"/>
+                        <constraint firstAttribute="width" constant="23" id="NwG-Ms-Sm2"/>
+                    </constraints>
+                    <state key="normal" image="xiugai"/>
+                    <connections>
+                        <action selector="nameEditorAction:" destination="XbF-Ex-9pg" eventType="touchUpInside" id="Ks9-Bh-fQp"/>
+                    </connections>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="购买VIP可以免费全部故事！" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2R-j7-ZBc">
+                    <rect key="frame" x="0.0" y="172" width="287" height="18"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vES-kS-kDp">
+                    <rect key="frame" x="57" y="210" width="172.5" height="38"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38" id="kCy-KI-tDt"/>
+                    </constraints>
+                    <state key="normal" title="购买VIP">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="buyAction:" destination="XbF-Ex-9pg" eventType="touchUpInside" id="fgP-3o-NMB"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="t6D-Df-LUd">
+                    <rect key="frame" x="57.5" y="266" width="172.5" height="38"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="38" id="7uE-Qu-kSg"/>
+                    </constraints>
+                    <state key="normal" title="退出家庭">
+                        <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <connections>
+                        <action selector="exitAction:" destination="XbF-Ex-9pg" eventType="touchUpInside" id="7Mq-t7-FiM"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nej-q4-ndX">
+                    <rect key="frame" x="241" y="0.0" width="46" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="46" id="FdJ-GG-hYx"/>
+                        <constraint firstAttribute="height" constant="40" id="j4K-vw-WUn"/>
+                    </constraints>
+                    <state key="normal" image="guanbi"/>
+                    <connections>
+                        <action selector="closeAction:" destination="XbF-Ex-9pg" eventType="touchUpInside" id="ZgH-9W-Ne8"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="0.92156862745098034" green="0.41176470588235292" blue="0.36470588235294116" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="U9Q-Jr-rVY" firstAttribute="trailing" secondItem="nej-q4-ndX" secondAttribute="trailing" id="0T5-po-pzf"/>
+                <constraint firstItem="dON-8D-EPi" firstAttribute="leading" secondItem="uZZ-Ec-uyj" secondAttribute="trailing" constant="30" id="1OL-Fl-djM"/>
+                <constraint firstItem="dON-8D-EPi" firstAttribute="centerY" secondItem="uZZ-Ec-uyj" secondAttribute="centerY" id="97L-MI-FQL"/>
+                <constraint firstItem="t6D-Df-LUd" firstAttribute="top" secondItem="vES-kS-kDp" secondAttribute="bottom" constant="18" id="9RN-zs-6oL"/>
+                <constraint firstItem="vES-kS-kDp" firstAttribute="centerX" secondItem="U9Q-Jr-rVY" secondAttribute="centerX" id="ClX-14-BL7"/>
+                <constraint firstItem="nej-q4-ndX" firstAttribute="top" secondItem="U9Q-Jr-rVY" secondAttribute="top" id="EHo-rz-aIr"/>
+                <constraint firstItem="r2R-j7-ZBc" firstAttribute="centerX" secondItem="U9Q-Jr-rVY" secondAttribute="centerX" id="Giz-6s-NQB"/>
+                <constraint firstItem="d2l-y5-g8i" firstAttribute="centerX" secondItem="U9Q-Jr-rVY" secondAttribute="centerX" id="KSu-0g-t5D"/>
+                <constraint firstItem="t6D-Df-LUd" firstAttribute="centerX" secondItem="vES-kS-kDp" secondAttribute="centerX" id="TTa-u9-pCJ"/>
+                <constraint firstItem="vES-kS-kDp" firstAttribute="width" secondItem="XbF-Ex-9pg" secondAttribute="width" multiplier="0.6" id="VS2-Lq-rE0"/>
+                <constraint firstItem="vES-kS-kDp" firstAttribute="top" secondItem="r2R-j7-ZBc" secondAttribute="bottom" constant="20" id="eix-bO-qd6"/>
+                <constraint firstItem="r2R-j7-ZBc" firstAttribute="width" secondItem="XbF-Ex-9pg" secondAttribute="width" id="h1x-m6-9Tx"/>
+                <constraint firstItem="uZZ-Ec-uyj" firstAttribute="top" secondItem="d2l-y5-g8i" secondAttribute="bottom" constant="20" id="h76-eS-wlu"/>
+                <constraint firstItem="uZZ-Ec-uyj" firstAttribute="centerX" secondItem="U9Q-Jr-rVY" secondAttribute="centerX" id="pMd-eB-r3C"/>
+                <constraint firstItem="d2l-y5-g8i" firstAttribute="top" secondItem="U9Q-Jr-rVY" secondAttribute="top" constant="30" id="rIT-WY-Rme"/>
+                <constraint firstItem="r2R-j7-ZBc" firstAttribute="top" secondItem="uZZ-Ec-uyj" secondAttribute="bottom" constant="14" id="utJ-aG-y2T"/>
+                <constraint firstItem="t6D-Df-LUd" firstAttribute="width" secondItem="vES-kS-kDp" secondAttribute="width" id="zrc-Sw-yEn"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="U9Q-Jr-rVY"/>
+            <connections>
+                <outlet property="buyBtn" destination="vES-kS-kDp" id="6jq-QU-jhp"/>
+                <outlet property="exitBtn" destination="t6D-Df-LUd" id="8PQ-G8-4zg"/>
+                <outlet property="headImg" destination="d2l-y5-g8i" id="u2d-sF-e0T"/>
+                <outlet property="name" destination="uZZ-Ec-uyj" id="LsZ-5Z-Ldg"/>
+                <outlet property="titleLabel" destination="r2R-j7-ZBc" id="lFq-JL-6bo"/>
+            </connections>
+            <point key="canvasLocation" x="7" y="-192"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="guanbi" width="22" height="23"/>
+        <image name="xiugai" width="20" height="22"/>
+    </resources>
+</document>

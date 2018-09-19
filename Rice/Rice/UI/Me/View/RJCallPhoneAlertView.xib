@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="hDV-CE-Y6D" customClass="RJCallPhoneAlertView">
+            <rect key="frame" x="0.0" y="0.0" width="464" height="205"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="拨打电话" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qhi-cM-uaV">
+                    <rect key="frame" x="182" y="20" width="100" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="1C0-MN-RQs"/>
+                        <constraint firstAttribute="height" constant="25" id="AAB-hZ-24J"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyx-E7-9Vb">
+                    <rect key="frame" x="10" y="60" width="444" height="0.0"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a72-31-Z2d">
+                    <rect key="frame" x="232" y="165" width="232" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="wJB-PH-WXe"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="确定"/>
+                    <connections>
+                        <action selector="continueAction:" destination="hDV-CE-Y6D" eventType="touchUpInside" id="0hJ-wF-Mth"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RcM-mh-olu">
+                    <rect key="frame" x="0.0" y="165" width="232" height="40"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="40" id="e1e-VH-Shm"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="取消"/>
+                    <connections>
+                        <action selector="cancelAction:" destination="hDV-CE-Y6D" eventType="touchUpInside" id="x97-qB-gxX"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="RcM-mh-olu" secondAttribute="bottom" id="9WD-9Z-bjh"/>
+                <constraint firstItem="fyx-E7-9Vb" firstAttribute="leading" secondItem="hDV-CE-Y6D" secondAttribute="leading" constant="10" id="Fgc-rT-vIL"/>
+                <constraint firstItem="a72-31-Z2d" firstAttribute="leading" secondItem="RcM-mh-olu" secondAttribute="trailing" id="Ii1-PK-uYG"/>
+                <constraint firstAttribute="trailing" secondItem="fyx-E7-9Vb" secondAttribute="trailing" constant="10" id="LYa-a1-dEk"/>
+                <constraint firstItem="Qhi-cM-uaV" firstAttribute="top" secondItem="hDV-CE-Y6D" secondAttribute="top" constant="20" id="Lqr-lx-qrp"/>
+                <constraint firstItem="RcM-mh-olu" firstAttribute="width" secondItem="a72-31-Z2d" secondAttribute="width" id="Mjg-JV-qmE"/>
+                <constraint firstItem="fyx-E7-9Vb" firstAttribute="top" secondItem="Qhi-cM-uaV" secondAttribute="bottom" constant="15" id="Odb-og-JPl"/>
+                <constraint firstItem="RcM-mh-olu" firstAttribute="leading" secondItem="hDV-CE-Y6D" secondAttribute="leading" id="gKB-fA-lUc"/>
+                <constraint firstItem="Qhi-cM-uaV" firstAttribute="centerX" secondItem="hDV-CE-Y6D" secondAttribute="centerX" id="uAX-GD-kD7"/>
+                <constraint firstAttribute="bottom" secondItem="a72-31-Z2d" secondAttribute="bottom" id="wPs-nw-sC3"/>
+                <constraint firstAttribute="trailing" secondItem="a72-31-Z2d" secondAttribute="trailing" id="xmb-5S-qeW"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <viewLayoutGuide key="safeArea" id="B8I-Z9-nF3"/>
+            <connections>
+                <outlet property="cancelButton" destination="RcM-mh-olu" id="jtO-nF-gsd"/>
+                <outlet property="continueButton" destination="a72-31-Z2d" id="buq-6X-kEI"/>
+                <outlet property="phoneNum" destination="fyx-E7-9Vb" id="4Dm-6t-E0Y"/>
+            </connections>
+            <point key="canvasLocation" x="81" y="-143.5"/>
+        </view>
+    </objects>
+</document>
